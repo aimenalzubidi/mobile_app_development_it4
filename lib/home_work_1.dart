@@ -15,44 +15,60 @@ class _HomeWork1State extends State<HomeWork1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.brown,
         title: const Text('السبحه'),
+        centerTitle: true,
       ),
-      body: Column(
-        children: [
-          const Text("سبحان الله "),
-          Text("$counter1 "),
-          ElevatedButton(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("سبحان الله ", style: TextStyle(fontSize: 24)),
+            Text("$counter1 "),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.brown),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+              ),
               onPressed: () {
                 setState(() {
                   counter1++;
                 });
               },
-              child: const Text("سبحان الله ")),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text("الحمد الله "),
-          Text("$counter2 "),
-          ElevatedButton(
+              child: const Text("سبحان الله "),
+            ),
+            const SizedBox(height: 10),
+            const Text("الحمد الله ", style: TextStyle(fontSize: 24)),
+            Text("$counter2 "),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.brown),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+              ),
               onPressed: () {
                 setState(() {
                   counter2++;
                 });
               },
-              child: const Text("الحمد لله")),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text("الله أكبر"),
-          Text("$counter3 "),
-          ElevatedButton(
+              child: const Text("الحمد لله"),
+            ),
+            const SizedBox(height: 10),
+            const Text("الله أكبر", style: TextStyle(fontSize: 24)),
+            Text("$counter3 "),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.brown),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+              ),
               onPressed: () {
                 setState(() {
                   counter3++;
                 });
               },
-              child: const Text("الله أكبر")),
-        ],
+              child: const Text("الله أكبر"),
+            ),
+          ],
+        ),
       ),
     );
   }
