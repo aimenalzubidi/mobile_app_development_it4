@@ -16,7 +16,7 @@ class _HomeWork1State extends State<HomeWork1> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.brown,
-        title: const Text('السبحه'),
+        title: const Text('السبحه', style: TextStyle(color: Colors.white)),
         centerTitle: true,
       ),
       body: Center(
@@ -69,6 +69,22 @@ class _HomeWork1State extends State<HomeWork1> {
             ),
           ],
         ),
+      ),
+      floatingActionButton: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.brown),
+          foregroundColor: MaterialStateProperty.all(Colors.white), 
+        ),
+        onPressed: () {
+          if (counter1 > 0 || counter2 > 0 || counter3 > 0) {
+            setState(() {
+              counter1 = 0;
+              counter2 = 0;
+              counter3 = 0;
+            });
+          }
+        },
+        child: Icon(Icons.refresh),
       ),
     );
   }
